@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Build12 DVORA'
                 sh 'ls'
+                sh 'docker build -t dvoraester/hello-sela:1.0 .'
             }
         }
         stage('Test') {
