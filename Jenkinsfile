@@ -7,7 +7,7 @@ pipeline {
                 sh 'docker build -t dvoraester/hello-sela:1.0 .'
                 }
             }
-        }
+        
 
         stage('Push to Docker Hub') {
             steps {
@@ -15,9 +15,7 @@ pipeline {
                sh 'docker push dvoraester/hello-sela:1.0'
                 }
             }
-        }
-    }
-
+    
     post {
         success {
             echo 'Build and push to Docker Hub successful!'
