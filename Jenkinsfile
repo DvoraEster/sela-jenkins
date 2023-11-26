@@ -14,9 +14,10 @@ pipeline {
                 echo 'Test!'
             }
         }
-        stage('Deploy') {
+        stage('Realse') {
             steps {
-                echo 'Deploy'
+                sh 'docker push dvoraester/hello-sela:1.0'
+                echo 'Realse'
             }
         }
     }
