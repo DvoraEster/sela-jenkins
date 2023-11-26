@@ -7,14 +7,6 @@ pipeline {
 //        DOCKER_HUB_PASSWORD = credentials('6b5cc6c1-f2fc-4333-b98f-7f12623065f4').password
 //    }
 
-    options {
-        // Set up SCM polling to check for changes every minute
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '5'))
-        scm {
-            pollSCM('*/1 * * * *')
-        }
-    }
-
     stages {
         stage('Checkout') {
             steps {
