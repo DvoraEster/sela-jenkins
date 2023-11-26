@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build1') {
             steps {
-                echo 'Build12432423'
+                echo 'Build12 DVORA'
             }
         }
         stage('Test') {
