@@ -5,6 +5,7 @@ pipeline {
         stage('Build1') {
             steps {
                 echo 'Build12 DVORA'
+                sh 'ls'
             }
         }
         stage('Test') {
